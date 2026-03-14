@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <title>Happy Birthday Madhavi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="confetti" aria-hidden="true"></canvas>
+    <div id="balloons" aria-hidden="true"></div>
+    <div id="petals" aria-hidden="true"></div>
+    <div id="paws" aria-hidden="true"></div>
+
+    <div class="bg" aria-hidden="true">
+      <div class="blob b1"></div>
+      <div class="blob b2"></div>
+      <div class="blob b3"></div>
+      <div class="gridlines"></div>
+      <div class="vignette"></div>
+    </div>
+
+    <header class="hero">
+      <nav class="topbar">
+        <div class="brand">
+          <div class="brand-mark">M</div>
+          <div class="brand-text">
+            <div class="brand-title">Birthday Celebration</div>
+            <div class="brand-sub">The crazy eight</div>
+          </div>
+        </div>
+        <div class="top-actions">
+          <button id="musicToggle" class="pill" type="button" aria-pressed="false">Play song</button>
+          <a class="pill" href="#friends">Meet the squad</a>
+        </div>
+      </nav>
+
+      <div class="hero-inner">
+        <div class="kicker reveal">Today we celebrate</div>
+        <h1 class="headline reveal">
+          Happy Birthday
+          <span class="headline-name">Madhavi</span>
+        </h1>
+        <p class="subhead reveal">
+          A bright day for a brighter soul. May your year be full of laughter, magic, and wins.
+        </p>
+
+        <div class="cta reveal">
+          <button id="openSurprise" class="btn primary" type="button">Open the surprise</button>
+          <button id="moreConfetti" class="btn" type="button">More confetti</button>
+        </div>
+
+        <div id="gift" class="gift reveal" role="button" tabindex="0" aria-label="Birthday gift">
+          <div class="gift-lid">
+            <div class="gift-lid-top"></div>
+            <div class="gift-bow">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="gift-box">
+            <div class="gift-ribbon"></div>
+            <div class="gift-ribbon v"></div>
+            <div id="card" class="card" role="button" tabindex="0" aria-label="Birthday card">
+              <div class="card-face front">
+                <div class="card-title">Tap to reveal</div>
+                <div class="card-mini">A message from all of us</div>
+              </div>
+              <div class="card-face back">
+                <div class="card-title">To Madhavi</div>
+                <div class="card-message">
+                  Happy Birthday! May your days bloom like flowers, feel cozy like a cat nap, and sparkle with joy all year.
+                </div>
+                <div class="card-sign">— Isuru, Ravindu, Samila, Gayathrini, Shamali, Kasuni, Devdini</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="scroll-hint" aria-hidden="true">
+          <div class="mouse"></div>
+          <div class="scroll-text">Scroll for more</div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="favorites" class="section">
+        <div class="section-head reveal">
+          <h2>Madhavi’s Favorites</h2>
+          <p>Two things that make her world extra cute and colorful.</p>
+        </div>
+
+        <div class="interests">
+          <article id="flowersCard" class="interest-card reveal" role="button" tabindex="0" aria-label="Flowers card">
+            <div class="interest-tag">Flowers</div>
+            <div class="interest-inner">
+              <div class="interest-icon flower" aria-hidden="true">
+                <span class="petal p1"></span>
+                <span class="petal p2"></span>
+                <span class="petal p3"></span>
+                <span class="petal p4"></span>
+                <span class="petal p5"></span>
+                <span class="center"></span>
+              </div>
+              <div class="interest-text">
+                <div class="interest-title">Bloom mode</div>
+                <div class="interest-desc">Tap for a petal sprinkle.</div>
+              </div>
+            </div>
+          </article>
+
+          <article id="catsCard" class="interest-card reveal" role="button" tabindex="0" aria-label="Cats card">
+            <div class="interest-tag">Cats</div>
+            <div class="interest-inner">
+              <div class="interest-icon cat" aria-hidden="true">
+                <span class="ear e1"></span>
+                <span class="ear e2"></span>
+                <span class="head"></span>
+                <span class="eye i1"></span>
+                <span class="eye i2"></span>
+                <span class="nose"></span>
+                <span class="whisker w1"></span>
+                <span class="whisker w2"></span>
+                <span class="whisker w3"></span>
+                <span class="whisker w4"></span>
+              </div>
+              <div class="interest-text">
+                <div class="interest-title">Purrfect vibes</div>
+                <div class="interest-desc">Tap for paw-print magic.</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="friends" class="section">
+        <div class="section-head reveal">
+          <h2>Team Birthday Squad</h2>
+          <p>Eight hearts, one celebration.</p>
+        </div>
+
+        <div id="friendsGrid" class="friends-grid"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-head reveal">
+          <h2>Wish Wall</h2>
+          <p>Little notes that pop with love.</p>
+        </div>
+
+        <div class="notes">
+          <article class="note reveal">
+            <div class="note-top">Glow</div>
+            <div class="note-body">May this year bring you bold adventures and soft peace.</div>
+          </article>
+          <article class="note reveal">
+            <div class="note-top">Wins</div>
+            <div class="note-body">May your hard work turn into proud moments, again and again.</div>
+          </article>
+          <article class="note reveal">
+            <div class="note-top">Joy</div>
+            <div class="note-body">May your days be loud with laughter and light with love.</div>
+          </article>
+          <article class="note reveal">
+            <div class="note-top">Magic</div>
+            <div class="note-body">May the universe surprise you with beautiful timing.</div>
+          </article>
+          <article class="note reveal">
+            <div class="note-top">Strength</div>
+            <div class="note-body">May you keep choosing yourself, your dreams, your happiness.</div>
+          </article>
+          <article class="note reveal">
+            <div class="note-top">Shine</div>
+            <div class="note-body">Keep being your wonderful self — the world needs that.</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section finale">
+        <div class="finale-inner reveal">
+          <h2>Let’s make it rain balloons</h2>
+          <p>Press play and enjoy the color storm.</p>
+          <div class="cta">
+            <button id="replay" class="btn primary" type="button">Replay balloons</button>
+            <a class="btn" href="#top" id="backToTop">Back to top</a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-inner">Made with love for Madhavi.</div>
+      </footer>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
